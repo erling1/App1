@@ -11,7 +11,7 @@ function HomePage(){
         const password = prompt("Please enter the password to access Family History");
         const correctPassword = 'erling123'
 
-        if(password == correctPassword){
+        if(password === correctPassword){
             navigate('pages/FamiliyHistory')
         } else {
             alert("Incorrect password. Please try again.")
