@@ -1,0 +1,67 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f4f7f6;  /* Light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Home Page Container */
+  .home-container {
+    text-align: center;
+    background-color: #fff;  /* White background for the content */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Header Styling */
+  .home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2b3e50; /* Dark blue-gray */
+  }
+  
+  /* Link Styling */
+  .home-container a {
+    text-decoration: none;
+    color: #4a90e2; /* Blue color for links */
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: inline-block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .home-container a:hover {
+    color: #1d5cb6; /* Darker blue for hover */
+  }
+  
+  /* Button Styling */
+  .home-container button {
+    background-color: #28a745;  /* Green button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-container button:hover {
+    background-color: #218838; /* Darker green for hover */
+  }

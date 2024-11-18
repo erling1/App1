@@ -1,0 +1,39 @@
+/* Navbar.css */
+
+/* Navbar Container Styling */
+.navbar {
+    background-color: #333;  /* Dark background color for the navbar */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;  /* Makes the navbar sticky at the top */
+    z-index: 10;  /* Ensures navbar stays on top of other content */
+  }
+  
+  /* Navbar Links Container */
+  .navbar-links {
+    display: flex;
+    justify-content: center;  /* Centers the links horizontally */
+    align-items: center;
+    gap: 30px;  /* Adds space between each link */
+  }
+  
+  /* Navbar Link Styling */
+  .navbar-link {
+    text-decoration: none;  /* Remove underline */
+    color: white;  /* White text color */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition for color and hover effects */
+  }
+  
+  /* Navbar Link Hover Effect */
+  .navbar-link:hover {
+    color: #4a90e2;  /* Blue color when hovering */
+    transform: scale(1.1);  /* Slightly enlarges the link */
+  }
+  
+  /* Optional: Active link styling */
+  .navbar-link.active {
+    color: #1d5cb6;  /* Darker blue for the active link */
+  }
+  
