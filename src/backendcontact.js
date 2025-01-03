@@ -18,7 +18,6 @@ export async function createChat() {
     return data;
 }
 
-console.log("base url", base_url)
 
 export async function sendChatMessage(chatId, Message) {
     const respons = await fetch(base_url + `/chats/${chatId}`, {
@@ -27,7 +26,6 @@ export async function sendChatMessage(chatId, Message) {
         body: JSON.stringify({ Message })
     });
 
-    //const data = await respons.json();
 
     if (!respons.ok) {
         return Promise.reject({ status: respons.status, data: await respons.json() });

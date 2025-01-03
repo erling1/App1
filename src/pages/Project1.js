@@ -2,22 +2,16 @@
 import '../CSS/Projects.css'; 
 import React, { useState } from 'react';
 import projectImage from '../images/project1.jpg';
-import { FaParagraph } from 'react-icons/fa';
-import hljs from 'highlight.js';
+
 import 'highlight.js/styles/default.css';
 
 
 function Project1() {
 
     const [showImages, setShowImages] = useState(false);
-    const [showScript, setShowScript] = useState(false);
 
     const handleImagesClick = () => {
         setShowImages(!showImages);
-      };
-    
-      const handleScriptClick = () => {
-        setShowScript(!showScript);
       };
 
     

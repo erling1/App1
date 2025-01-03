@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CSS/Navbar.css'; // Ensure to include the CSS for your components
+import './CSS/Navbar.css'; 
 import WorkExperiance from './pages/WorkExperiance';
 
 export function Navbar() {

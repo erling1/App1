@@ -1,7 +1,6 @@
 import Markdown from 'react-markdown';
 import useAutoScroll from './hooks/useAutoScroll';
 import Spinner from './components/Spinner';
-import userIcon from './assets/user.svg';
 import errorIcon from './assets/error.svg';
 
 function ChatMessages({ messages, isLoading }) {

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import '../CSS/Projects.css';
-// Import your family tree visualization image when you have it
-// import familyTreeImage from '../images/familyTree.jpg';
 
 function Project6() {
   const [showVisualization, setShowVisualization] = useState(false);

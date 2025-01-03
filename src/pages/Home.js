@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import '../CSS/Homepage.css';
-import { Tooltip as ReactTooltip } from 'react-tooltip';
-import { FaLock } from 'react-icons/fa';
-/* From Uiverse.io by alexmaracinaru */ 
+
 
 
 
