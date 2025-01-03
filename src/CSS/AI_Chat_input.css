@@ -1,0 +1,60 @@
+/* ChatInput container */
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Textarea input field */
+  .chat-input textarea {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;  /* Disable resizing */
+    width: 100%;
+    min-height: 30px;  /* Minimum height for the input */
+    max-height: 150px;  /* Maximum height for the input */
+    transition: all 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .chat-input textarea:focus {
+    border-color: #0078D4;  /* Focus border color */
+    box-shadow: 0 0 5px rgba(0, 120, 212, 0.5);  /* Focus shadow */
+  }
+  
+  /* Send button */
+  .chat-input button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chat-input button img {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;  /* Prevent clicking the image */
+    transition: transform 0.2s ease;
+  }
+  
+  .chat-input button:hover img {
+    transform: scale(1.1);  /* Slightly scale the send icon on hover */
+  }
+  
+  .chat-input button:disabled img {
+    opacity: 0.5;  /* Make the send icon less visible when button is disabled */
+  }
+  

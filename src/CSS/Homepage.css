@@ -1,67 +1,99 @@
+/* ImageGallery.css */
+.home-container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
 
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.gallery-container {
+  max-width: 900px; /* Adjusted for 3 columns */
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 0; /* Ensure no gap between grid items */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+  border-collapse: collapse; /* Ensure no border spacing */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1; /* Ensure square aspect ratio */
+  cursor: pointer;
+  height: 300px; /* Adjust height for 3 columns */
+  
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Remove any inline spacing below images */
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .gallery-container {
+    max-width: 100%;
   }
   
-  /* Body Styling */
-  body {
-    background-color: #f4f7f6;  /* Light background */
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on mobile */
   }
   
-  /* Home Page Container */
-  .home-container {
-    text-align: center;
-    background-color: #fff;  /* White background for the content */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
+  .gallery-item {
+    height: 150px; /* Smaller height on mobile */
   }
-  
-  /* Header Styling */
-  .home-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #2b3e50; /* Dark blue-gray */
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
   }
-  
-  /* Link Styling */
-  .home-container a {
-    text-decoration: none;
-    color: #4a90e2; /* Blue color for links */
-    font-size: 1.2rem;
-    margin: 10px 0;
-    display: inline-block;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .home-container a:hover {
-    color: #1d5cb6; /* Darker blue for hover */
-  }
-  
-  /* Button Styling */
-  .home-container button {
-    background-color: #28a745;  /* Green button */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .home-container button:hover {
-    background-color: #218838; /* Darker green for hover */
-  }
+}

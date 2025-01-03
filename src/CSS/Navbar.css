@@ -1,39 +1,188 @@
-/* Navbar.css */
 
-/* Navbar Container Styling */
-.navbar {
-    background-color: #333;  /* Dark background color for the navbar */
-    padding: 20px 0;
-    position: sticky;
-    top: 0;  /* Makes the navbar sticky at the top */
-    z-index: 10;  /* Ensures navbar stays on top of other content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px; /* Increase the space between items in the navbar */
+}
+
+/* Home Icon Styles */
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(252, 252, 252);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab:hover {
+  background-color: rgb(223, 223, 223);
+  transform: translateY(-2px);
+}
+
+.svgIcon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* CTA Button Styles */
+.cta {
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Hamburger Menu Container */
+.menu-container {
+  position: relative;
+}
+
+/* Hamburger Icon */
+.bar {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+}
+
+.bar span {
+  position: absolute;
+  width: 45px;
+  height: 7px;
+  background: #5c5e5b;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top { top: 0; }
+.bar span.middle { top: 17px; }
+.bar span.bottom { bottom: 0; }
+
+input[type="checkbox"]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 48px;
+  left: 5px;
+}
+
+input[type="checkbox"]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 48px;
+  bottom: -1px;
+  box-shadow: 0 0 10px #787d82;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.menu-items {
+  padding: 0.5rem 0;
+}
+
+.menu-items a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.menu-items a:hover {
+  background-color: #f5f5f5;
+  padding-left: 1.5rem;
+}
+
+/* Hide checkbox */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+/* Modified responsive design to keep menu visible */
+@media (max-width: 968px) {
+  .desktop-nav {
+    display: none;
   }
-  
-  /* Navbar Links Container */
-  .navbar-links {
-    display: flex;
-    justify-content: center;  /* Centers the links horizontally */
-    align-items: center;
-    gap: 30px;  /* Adds space between each link */
-  }
-  
-  /* Navbar Link Styling */
-  .navbar-link {
-    text-decoration: none;  /* Remove underline */
-    color: white;  /* White text color */
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition for color and hover effects */
-  }
-  
-  /* Navbar Link Hover Effect */
-  .navbar-link:hover {
-    color: #4a90e2;  /* Blue color when hovering */
-    transform: scale(1.1);  /* Slightly enlarges the link */
-  }
-  
-  /* Optional: Active link styling */
-  .navbar-link.active {
-    color: #1d5cb6;  /* Darker blue for the active link */
-  }
-  
+}

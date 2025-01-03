@@ -1,79 +1,161 @@
-/* DIYProjects.css */
-
+/* Main Projects Container */
 .projects-container {
-    background-color: #f4f7f6;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 50px auto;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2b3e50;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: #2b3e50;
-    margin-bottom: 15px;
-  }
-  
-  h3 {
-    font-size: 1.6rem;
-    color: #4a90e2;
-    margin-top: 20px;
-  }
-  
-  .project {
-    background-color: white;
+  background-color: #f4f7f6;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2b3e50;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2b3e50;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #333; /* Unified dark text color */
+  margin-top: 20px;
+}
+
+/* Project Card */
+.project {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Project Lists */
+.project ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #333; /* Unified dark text color */
+}
+
+.project li {
+  margin: 8px 0;
+}
+
+.project li::before {
+  content: "•";
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+/* Project Paragraphs */
+.project p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; /* Unified dark text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
     padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
-  
-  .project ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.1rem;
-    color: #333;
+
+  h1 {
+    font-size: 2rem;
   }
-  
-  .project li {
-    margin: 8px 0;
+
+  h2 {
+    font-size: 1.8rem;
   }
-  
-  .project li::before {
-    content: "•";
-    margin-right: 10px;
-    color: #4a90e2;
+
+  h3 {
+    font-size: 1.4rem;
   }
-  
-  .project p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .projects-container {
-      padding: 20px;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    h3 {
-      font-size: 1.4rem;
-    }
-  }
-  
+}
+
+/* Button Styles */
+.DIYbutton {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.DIYbutton:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.DIYbutton::before,
+.DIYbutton::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  width: 140%;
+  height: 180%;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.DIYbutton::before {
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.DIYbutton::after {
+  top: 180%;
+  background-color: #3c4241;
+}
+
+.DIYbutton:hover {
+  color: #ffffff;
+  border: 1px solid #323636;
+}
+
+.DIYbutton:hover::before {
+  top: -35%;
+  background-color: #2f3434;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.DIYbutton:hover::after {
+  top: -45%;
+  background-color: #292e2e;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Horizontal Alignment for Progress Section */
+.progress-container {
+  display: flex; /* Enables Flexbox */
+  align-items: center; /* Vertically aligns items in the center */
+  justify-content: space-between; /* Adds space between text and button */
+  gap: 20px; /* Adds spacing between text and button */
+  margin: 20px 0; /* Adds some vertical spacing */
+}
+
+/* Text Styling */
+.progress-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333333;
+  margin: 0; /* Removes default margin */
+}

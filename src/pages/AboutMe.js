@@ -7,52 +7,24 @@ function AboutMe() {
       <h1>About Me</h1>
       <div className="about-summary">
         <p>
-          Hi, I'm John Doe, a passionate web developer with experience in building modern, responsive, and user-friendly web applications. I specialize in JavaScript, React, and front-end development, but I also enjoy learning new technologies and expanding my skill set. My goal is to create clean and efficient code while focusing on the best user experience possible.
+          Hi, I'm Erling, a highly motivated and enthusiastic data scientist with a master's degree in Particle Physics from the University of Oslo. I have a strong foundation in machine learning, data analysis, image analysis, mathematics, and various programming languages. I am passionate about leveraging my skills to solve complex problems and make data-driven decisions.
         </p>
         <p>
-          I have worked on various projects ranging from small business websites to large-scale applications. I'm always eager to learn and take on new challenges, and I love collaborating with other developers and teams to bring innovative ideas to life.
+          With a keen interest in continuous learning, I seek opportunities in dynamic and innovative environments where I can use my knowledge and grow professionally. Over the past year, as my Python and coding skills have significantly improved, I have developed a passion for various fun DIY projects, and I can't wait to experiment using affordable hardware such as Raspberry Pi and a range of sensors to create cool and interesting projects. I am excited to share the results of the various projects, as well as other intersting things i might come across.
+          This website will be my central hub of information where I can put out a range of information, not just the DIY projects I am currently working on.
         </p>
       </div>
 
-      <div className="about-skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>JavaScript (ES6+)</li>
-          <li>React.js & Redux</li>
-          <li>HTML5 & CSS3</li>
-          <li>Responsive Design & Mobile First</li>
-          <li>Version Control (Git, GitHub)</li>
-          <li>API Integration (REST, GraphQL)</li>
-          <li>UI/UX Design Principles</li>
-        </ul>
-      </div>
-
-      <div className="about-experience">
-        <h2>Experience</h2>
-        <p>
-          I have worked on a variety of projects as both a freelance developer and part of a team. Here are a few highlights:
-        </p>
-        <ul>
-          <li>
-            <strong>Freelance Web Developer</strong> | 2020 - Present
-            <p>Worked with clients to design, develop, and deploy custom websites and applications.</p>
-          </li>
-          <li>
-            <strong>Front-End Developer at XYZ Corp</strong> | 2018 - 2020
-            <p>Collaborated on a team of developers to build and maintain responsive web applications using React.js and Redux.</p>
-          </li>
-        </ul>
-      </div>
+  
 
       <div className="about-goals">
         <h2>My Goals</h2>
-        <p>
-          As I continue to grow in my career, I strive to:
-        </p>
+        <p>As I continue to develop my career, I aim to:</p>
         <ul>
-          <li>Stay up to date with the latest web development technologies and best practices.</li>
-          <li>Expand my knowledge of back-end development and databases.</li>
-          <li>Contribute to open-source projects and give back to the developer community.</li>
+          <li>Stay updated with the latest advancements in data science and machine learning.</li>
+          <li>Obtain certifications in Azure and other relevant technologies.</li>
+          <li>Contribute to impactful projects where I can utilize my skills in data analysis and machine learning to solve real-world problems.</li>
+          <li>Collaborate with like-minded professionals and expand my professional network.</li>
         </ul>
       </div>
     </div>
