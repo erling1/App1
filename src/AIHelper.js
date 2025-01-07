@@ -40,7 +40,7 @@ function AI_helper_button() {
             if (!chatId) {
             //createChat returns json data, make it python. create chat needs to be js function that fetches from the python api
 
-            //destructure the json dict that createChat returns
+            //destructure the jsonn dict that createChat returns
             const { id } = await createChat();
 
             setChatId(id);
