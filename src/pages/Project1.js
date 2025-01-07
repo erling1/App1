@@ -3,7 +3,7 @@ import '../CSS/Projects.css';
 import React, { useState } from 'react';
 import projectImage from '../images/project1.jpg';
 
-import 'highlight.js/styles/default.css';
+
 
 
 function Project1() {
