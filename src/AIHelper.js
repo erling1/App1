@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useImmer } from 'use-immer';
+//mport { useImmer } from 'use-immer';
 import './CSS/AIHelper.css';
 import { createChat, sendChatMessage } from './backendcontact';
 import { parseSSEStream } from './SSEStream';
@@ -10,7 +10,7 @@ function AI_helper_button() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [chatId, setChatId] = useState(null);
-  const [messages, setMessages] = useImmer([]);
+  const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
   const isLoading = messages.length && messages[messages.length - 1].loading;
@@ -24,7 +24,7 @@ function AI_helper_button() {
     const trimmedMessage = newMessage.trim();
     if (!trimmedMessage || isLoading) return;
 
-    setMessages(draft => [...draft, //setting up an array of old messages
+    setMessages(prevMessages => [...prevMessages, //setting up an array of old messages !! now using useState instead of us-immer, changing draft to prevMesagges
 
         { role: 'user', content: trimmedMessage },
         { role: 'assistant', content: '', sources: [], loading: true }
