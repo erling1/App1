@@ -1,6 +1,6 @@
 
 import '../CSS/Projects.css'; 
-import React, { useState } from 'react';
+import React from 'react';
 import 'highlight.js/styles/default.css';
 
 
