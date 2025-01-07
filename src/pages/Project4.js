@@ -1,7 +1,7 @@
 
 import '../CSS/Projects.css'; 
 import React from 'react';
-import 'highlight.js/styles/default.css';
+
 
 
 function Project4() {

@@ -10,7 +10,7 @@ function AI_helper_button() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [chatId, setChatId] = useState(null);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]); //useimmer([])
   const [newMessage, setNewMessage] = useState('');
 
   const isLoading = messages.length && messages[messages.length - 1].loading;
