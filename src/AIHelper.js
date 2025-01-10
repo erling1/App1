@@ -6,7 +6,7 @@ import { parseSSEStream } from './SSEStream';
 import ChatMessages from './AI_Chat_History';
 import ChatInput from './AI_Chat_Input';
 
-function AI_helper_button() {
+function AiHelperButton() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [chatId, setChatId] = useState(null);
@@ -138,4 +138,4 @@ function AI_helper_button() {
   );
 }
 
-export default AI_helper_button;
+export default AiHelperButton;

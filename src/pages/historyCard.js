@@ -11,7 +11,7 @@ const PersonCard = ({ personId }) => {
   
     return (
       <div className="link-container">
-        <a href="#" className="link">{person.name}</a>
+        <button className="link">{person.name}</button>
         <div className="card">
           <div className="profile-image">
             <div className="image-container">

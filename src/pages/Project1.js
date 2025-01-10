@@ -47,7 +47,6 @@ function Project1() {
           <h3>Future Developments</h3>
           <div className="development-items">
             <div className="development-item">
-              <h4></h4>
               <ul>
                 <li>No further development need</li>
                 
@@ -67,7 +66,7 @@ function Project1() {
               {/* Image Section */}
               {showImages && (
                 <div className="project-image">
-                  <img src={projectImage} alt="Project 1 Image" />
+                  <img src={projectImage} alt="Project 1" />
                   <p> My girlfriend was also making a mitten</p>
                 </div>
               )}

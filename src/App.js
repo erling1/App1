@@ -15,7 +15,7 @@ import Project3 from './pages/Project3';
 import Project4 from './pages/Project4';
 import Project5 from './pages/Project5';
 import Project6 from './pages/Project6';
-import AI_helper_button from './AIHelper';
+import AiHelperButton from './AIHelper';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         <Route path="/pages/Project5" element={<Project5/>}/>
         <Route path="/pages/Project6" element={<Project6/>}/>
       </Routes>
-      <AI_helper_button/>
+      <AiHelperButton/>
     </div>
   );
 }
