@@ -8,14 +8,15 @@ function useAutoScroll(active) {
   const prevScrollTop = useRef(null);
 
   useEffect(() => {
-    const currentRef = scrollContentRef.current; // Store ref value
+    // Store the ref value at the start of the effect
+    const currentRef = scrollContentRef.current;
   
     const resizeObserver = new ResizeObserver(() => {
-      if (currentRef) {
+      if (currentRef) {  // Use currentRef instead of scrollContentRef.current
         const { scrollHeight, clientHeight, scrollTop } = currentRef;
         // Scroll to bottom only if content is not disabled
         if (!isDisabled.current && scrollHeight - clientHeight > scrollTop) {
-          currentRef.scrollTo({
+          currentRef.scrollTo({  // Use currentRef here too
             top: scrollHeight - clientHeight,
             behavior: 'smooth'
           });
@@ -23,13 +24,15 @@ function useAutoScroll(active) {
       }
     });
   
-    if (currentRef) {
+    if (currentRef) {  // Use currentRef here
       resizeObserver.observe(currentRef);
     }
   
     return () => {
+      if (currentRef) {  // Clean up with currentRef if needed
+        resizeObserver.unobserve(currentRef);
+      }
       resizeObserver.disconnect();
-      
     };
   }, []);
 
