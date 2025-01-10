@@ -8,15 +8,13 @@ function useAutoScroll(active) {
   const prevScrollTop = useRef(null);
 
   useEffect(() => {
-    // Store the ref value at the start of the effect
     const currentRef = scrollContentRef.current;
   
     const resizeObserver = new ResizeObserver(() => {
-      if (currentRef) {  // Use currentRef instead of scrollContentRef.current
+      if (currentRef) {
         const { scrollHeight, clientHeight, scrollTop } = currentRef;
-        // Scroll to bottom only if content is not disabled
         if (!isDisabled.current && scrollHeight - clientHeight > scrollTop) {
-          currentRef.scrollTo({  // Use currentRef here too
+          currentRef.scrollTo({
             top: scrollHeight - clientHeight,
             behavior: 'smooth'
           });
@@ -24,12 +22,12 @@ function useAutoScroll(active) {
       }
     });
   
-    if (currentRef) {  // Use currentRef here
+    if (currentRef) {
       resizeObserver.observe(currentRef);
     }
   
     return () => {
-      if (currentRef) {  // Clean up with currentRef if needed
+      if (currentRef) {
         resizeObserver.unobserve(currentRef);
       }
       resizeObserver.disconnect();
@@ -42,9 +40,11 @@ function useAutoScroll(active) {
       return;
     }
 
+    const currentRef = scrollContentRef.current;  // Store ref value
+
     function onScroll() {
-      if (scrollContentRef.current) {
-        const { scrollHeight, clientHeight, scrollTop } = scrollContentRef.current;
+      if (currentRef) {
+        const { scrollHeight, clientHeight, scrollTop } = currentRef;
         if (
           !isDisabled.current &&
           scrollTop < prevScrollTop.current &&
@@ -62,12 +62,16 @@ function useAutoScroll(active) {
     }
 
     isDisabled.current = false;
-    if (scrollContentRef.current) {
-      prevScrollTop.current = scrollContentRef.current.scrollTop;
+    if (currentRef) {
+      prevScrollTop.current = currentRef.scrollTop;
+      currentRef.addEventListener('scroll', onScroll);
     }
-    scrollContentRef.current?.addEventListener('scroll', onScroll);
 
-    return () => scrollContentRef.current?.removeEventListener('scroll', onScroll);
+    return () => {
+      if (currentRef) {
+        currentRef.removeEventListener('scroll', onScroll);
+      }
+    };
   }, [active]);
 
   return scrollContentRef;
