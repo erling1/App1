@@ -5,7 +5,6 @@ import projectImage from '../images/project1.jpg';
 
 
 
-
 function Project1() {
 
     const [showImages, setShowImages] = useState(false);
