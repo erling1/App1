@@ -23,14 +23,14 @@ const WelcomeModal = () => {
       <div className="modal-content">
         <h2 className="modal-title">Welcome to my website! 🤠</h2>
         <p className="modal-description">
-        This is my website where I post mainly about the projects I am working on, and my journey 
-        as I evovle as a coder and learn new cool stuff. Now this website is in of itself one of my long term projects, 
-        where the goal is to learn and get better at frontend coding (JavaScript and React). Since this website is constantly progressing,
-        there will be some missing or underdevolped features. For more details, the Projects overview gives a description of the progress
-        for all my different projects and goals.
+        This is my website, where I mostly share updates on the projects I’m working on and document 
+        my journey as I get better at coding and explore new projects. The website itself is one of 
+        my long-term projects, with the goal of improving my frontend development skills, particularly in JavaScript and React.
 
+        Since this site is a work in progress, you may encounter some missing or underdeveloped features. For a more detailed overview, 
+        the Projects Overview section provides insights into the progress and goals of all my various projects.
 
-        There might also be a bug or two or three along the way too 🤠
+        You might also come across a bug—or maybe two or three—along the way 🤠.
         </p>
         
 

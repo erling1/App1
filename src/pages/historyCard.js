@@ -11,7 +11,7 @@ const PersonCard = ({ personId }) => {
   
     return (
       <div className="link-container">
-        <button className="link">{person.name}</button>
+       <name  className="link">{person.name}</name>
         <div className="card">
           <div className="profile-image">
             <div className="image-container">
