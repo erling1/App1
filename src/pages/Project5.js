@@ -61,6 +61,10 @@ function Project5() {
                             <source src="/Videos/motionsensoreksempel.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                        <p className="text-sm text-gray-600 mt-2 italic">
+                            This demo is to show the Flask server running smoothly and the face tracking algorithm is able to find my face.
+                            The video is a bit short as I forgot to take a proper video before taking the server down.
+                        </p>
                     </div>
                 </div>
 
