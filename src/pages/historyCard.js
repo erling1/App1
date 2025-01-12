@@ -11,7 +11,7 @@ const PersonCard = ({ personId }) => {
   
     return (
       <div className="link-container">
-       <name  className="link">{person.name}</name>
+       <a href="/pages/InfoRelativeFamilyHistory" className="link">{person.name}</a>
         <div className="card">
           <div className="profile-image">
             <div className="image-container">

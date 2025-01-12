@@ -51,6 +51,17 @@ function Project5() {
                         <li>Basic face recognition algorithms processing the video stream from (/camera) endpoint </li>
                         <li>Client-side processing on PC for improved performance, where I am focusing on well known and popular haar cascade for prototyping my code </li>
                     </ul>
+                    
+                    <div className="video-demo mt-4">
+                        <h4>Project Progress Demo</h4>
+                        <video 
+                            className="w-full rounded-lg shadow-lg" 
+                            controls
+                        >
+                            <source src="/Videos/motionsensoreksempel.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
 
                 <div className="challenges-section">
