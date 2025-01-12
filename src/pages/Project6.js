@@ -25,15 +25,15 @@ function Project6() {
         </div>
 
         <div className="technical-section">
-          <h3>Technical Implementation</h3>
+          <h3>Technical implementation</h3>
           <ul>
-            <li>React.js for the frontend interface with interactive components</li>
+            <li>React for the frontend interface with interactive components</li>
 
           </ul>
         </div>
 
         <div className="status-section">
-          <h3>Current Features</h3>
+          <h3>Current features</h3>
           <div className="development-item">
             <h4>Implemented Functionality</h4>
             <ul>
@@ -44,7 +44,7 @@ function Project6() {
         </div>
 
         <div className="future-section">
-          <h3>Future Enhancements</h3>
+          <h3>Future goals</h3>
           <div className="development-item">
             <h4>Planned Features</h4>
             <ul>
