@@ -16,12 +16,14 @@ import Project4 from './pages/Project4';
 import Project5 from './pages/Project5';
 import Project6 from './pages/Project6';
 import AiHelperButton from './AIHelper';
+import WelcomeModal from './pages/WelcomeModal';
 
 
 function App() {
   return (
     <div>
       <Navbar />
+      <WelcomeModal/>
       
       <Routes>
         <Route path="/" element={<Home />} />

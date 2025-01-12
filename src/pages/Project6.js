@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../CSS/Projects.css';
 
 function Project6() {
-  const [showVisualization, setShowVisualization] = useState(false);
-
-  const handleVisualizationClick = () => {
-    setShowVisualization(!showVisualization);
-  };
-
+  
   return (
     <div className="project-description">
       <div className="project-header">
@@ -26,8 +21,6 @@ function Project6() {
         <div className="project-overview">
           <p>
             An interactive web application that visualizes and preserves family history 
-            through an engaging digital experience. This project combines genealogical 
-            research with modern web technologies to create a dynamic family tree visualization.
           </p>
         </div>
 
@@ -35,28 +28,8 @@ function Project6() {
           <h3>Technical Implementation</h3>
           <ul>
             <li>React.js for the frontend interface with interactive components</li>
-            <li>D3.js for creating dynamic family tree visualizations</li>
-            <li>MongoDB for storing family history data and relationships</li>
-            <li>Node.js backend for handling data operations and API endpoints</li>
+
           </ul>
-        </div>
-
-        <div className="development-items">
-          <div className="project-content">
-            <button onClick={handleVisualizationClick} className="view-button">
-              {showVisualization ? 'Hide Visualization' : 'View Family Tree'}
-            </button>
-
-            {showVisualization && (
-              <div className="video-section">
-                {/* Replace with your actual family tree visualization */}
-                <div className="project-image">
-                  <p>Family Tree Visualization will be displayed here</p>
-                  {/* <img src={familyTreeImage} alt="Family Tree Visualization" className="project-image" /> */}
-                </div>
-              </div>
-            )}
-          </div>
         </div>
 
         <div className="status-section">
@@ -64,10 +37,8 @@ function Project6() {
           <div className="development-item">
             <h4>Implemented Functionality</h4>
             <ul>
-              <li>Interactive family tree visualization with zoom and pan capabilities</li>
-              <li>Individual family member profiles with photos and biographical information</li>
-              <li>Story collection and preservation system</li>
-              <li>Search functionality to find specific family members</li>
+              <li>Individual family member profiles with photos and some biographical information</li>
+            
             </ul>
           </div>
         </div>
@@ -77,10 +48,9 @@ function Project6() {
           <div className="development-item">
             <h4>Planned Features</h4>
             <ul>
-              <li>Timeline visualization of family events</li>
-              <li>Geographic mapping of family migration patterns</li>
-              <li>Integration with genealogy databases for automatic updates</li>
-              <li>Mobile application for easy family history contributions</li>
+              <li>Search functionality to find specific family members</li>
+              <li>Create a MongoDB database for storing family history data and relationships</li>
+              
             </ul>
           </div>
         </div>

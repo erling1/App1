@@ -1,0 +1,84 @@
+/* WelcomeModal.css */
+.modal-overlay {
+    position: fixed;  /* This ensures it covers the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;  /* Makes sure it appears on top of everything */
+    backdrop-filter: blur(5px);  /* Adds a blur effect to the background */
+  }
+  
+  .modal-content {
+    background: rgba(255, 255, 255, 0.95);  /* Slightly transparent white */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    margin: 0 0 1rem 0;
+    color: #333;
+  }
+  
+  .modal-description {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .modal-benefits {
+    margin: 1.5rem 0;
+  }
+  
+  .modal-benefits ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: #444;
+  }
+  
+  .modal-benefits li {
+    margin: 0.5rem 0;
+  }
+  
+  .modal-button {
+    background-color: #666;  /* Grey button */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .modal-button:hover {
+    background-color: #777;
+    transform: translateY(-1px);
+  }
+  
+  .modal-button:active {
+    transform: translateY(1px);
+  }
+  
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 1.5rem;
+      width: 95%;
+    }
+    
+    .modal-title {
+      font-size: 20px;
+    }
+  }

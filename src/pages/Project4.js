@@ -71,7 +71,7 @@ function Project4() {
             <div className="development-item">
               <h4>Azure Deployment</h4>
               <ul>
-                <li>Goal: Achieve consistent availability</li>
+                <li>Consistent availability</li>
                 <li>Eliminate manual server maintenance</li>
               </ul>
             </div>
@@ -79,8 +79,8 @@ function Project4() {
             <div className="development-item">
               <h4>Prompt Engineering</h4>
               <ul>
-                <li>Enhance response accuracy through specialized prompt training</li>
-                <li>Optimize chatbot interactions for better user experience</li>
+                <li>Get my chatbot to actually respond to relevent questions about my website</li>
+                <li>Fix various frontend limitations (scroll effect is bugged for long chat histories)</li>
               </ul>
             </div>
           </div>
