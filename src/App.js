@@ -18,6 +18,7 @@ import Project6 from './pages/Project6';
 import AiHelperButton from './AIHelper';
 import WelcomeModal from './pages/WelcomeModal';
 import InformationRelative from './pages/InfoRelativeFamilyHistory';
+import CVEnglish from './pages/CVEnglish';
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
         <Route path="/pages/Project5" element={<Project5/>}/>
         <Route path="/pages/Project6" element={<Project6/>}/>
         <Route  path="/pages/InfoRelativeFamilyHistory" element={<InformationRelative/>}/>
+        <Route  path="/pages/CVEnglish" element={<CVEnglish/>}/>
+        
       </Routes>
       <AiHelperButton/>
     </div>
