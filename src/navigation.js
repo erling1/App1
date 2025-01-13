@@ -87,8 +87,7 @@ export function Navbar() {
           <div className={`dropdown-menu ${isChecked ? 'active' : ''}`}>
             <div className="menu-items">
               <a href="#about" onClick={aboutmeButton}>About Me</a>
-              <a href="#contact" onClick={WorkExperiance}>Work Experience</a>
-              <a href="#contact" onClick={FamilyHistoryButton}>Family History</a>
+              <a href="#FamilyHistory" onClick={FamilyHistoryButton}>Family History</a>
               <a href="#contact" onClick={contactmeButton}>Contact Me</a>
             </div>
           </div>
