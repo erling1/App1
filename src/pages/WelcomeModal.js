@@ -23,6 +23,7 @@ const WelcomeModal = () => {
       <div className="modal-content">
         <h2 className="modal-title">Welcome to my website! 🤠</h2>
         <p className="modal-description">
+        
         This is my website, where I mostly share updates on the projects I’m working on and document 
         my journey as I get better at coding and explore new projects. The website itself is one of 
         my long-term projects, with the goal of improving my frontend development skills, particularly in JavaScript and React.

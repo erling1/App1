@@ -6,25 +6,24 @@ import html2pdf from 'html2pdf.js';
 function CV() {
 
   const navigate = useNavigate();
-      const handleClick =() =>{
-  
-          navigate("/pages/CVEnglish")}
+  const handleClick =() =>{
+        navigate("/pages/CVEnglish")}
 
 
-      const handleDownload = () => {
-              const cvElement = document.getElementById('cv-content');
-              const opt = {
-                  margin: 1,
-                  filename: 'Erling_Nupen_CV_English.pdf',
-                  image: { type: 'jpeg', quality: 0.98 },
-                  html2canvas: { scale: 2 },
-                  jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-              };
-                  
-                  html2pdf().set(opt).from(cvElement).save();
-                };
+  const handleDownload = () => {
+          const cvElement = document.getElementById('cv-content');
+          const opt = {
+              margin: 1,
+              filename: 'Erling_Nupen_CV_Norsk.pdf',
+              image: { type: 'jpeg', quality: 0.98 },
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+              
+              html2pdf().set(opt).from(cvElement).save();
+            };
   return (
-    <div className="cv-container">
+    <div className="cv-container" id='cv-content'>
       <header className="cv-header">
         <h1>Erling Nupen</h1>
 
