@@ -40,7 +40,6 @@
   aspect-ratio: 1; /* Ensure square aspect ratio */
   cursor: pointer;
   height: 300px; /* Adjust height for 3 columns */
-  
 }
 
 .gallery-item img {
@@ -77,23 +76,28 @@
   opacity: 1;
 }
 
-/* Media query for responsive design */
 @media (max-width: 768px) {
   .gallery-container {
     max-width: 100%;
+    padding: 0; /* Remove padding */
   }
-  
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%; /* Ensure full width */
+    margin: 0; /* Remove margins */
   }
-  
   .gallery-item {
-    height: 150px; /* Smaller height on mobile */
+    height: 150px;
+    width: 100%; /* Ensure items take full width */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-grid {
-    grid-template-columns: 1fr; /* Single column on very small screens */
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .gallery-item {
+    width: 100%;
   }
 }

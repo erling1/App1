@@ -181,9 +181,3 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-/* Modified responsive design to keep menu visible */
-@media (max-width: 968px) {
-  .desktop-nav {
-    display: none;
-  }
-}
