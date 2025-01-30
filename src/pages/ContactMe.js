@@ -106,7 +106,7 @@ const Submit = (e) => {
           <label htmlFor="message">Your message:</label>
           <textarea id="message" name="message" value={message} onChange={handleInput} required></textarea>
 
-          <button type="submit" on onClick={Submit} > Send Message </button>
+          <button type="submit" onClick={Submit}>Send Message</button>
         </form>
       </div>
     </div>
