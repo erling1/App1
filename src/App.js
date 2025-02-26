@@ -15,6 +15,7 @@ import Project3 from './pages/Project3';
 import Project4 from './pages/Project4';
 import Project5 from './pages/Project5';
 import Project6 from './pages/Project6';
+import Project7 from './pages/Project7'
 import AiHelperButton from './AIHelper';
 import WelcomeModal from './pages/WelcomeModal';
 import InformationRelative from './pages/InfoRelativeFamilyHistory';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/pages/Project4" element={<Project4/>}/>
         <Route path="/pages/Project5" element={<Project5/>}/>
         <Route path="/pages/Project6" element={<Project6/>}/>
+        <Route path="/pages/Project7" element={<Project7/>}/>
         <Route  path="/pages/InfoRelativeFamilyHistory" element={<InformationRelative/>}/>
         <Route  path="/pages/CVEnglish" element={<CVEnglish/>}/>
         <Route  path="/pages/Politics" element={<PoliticsSearch/>}/>

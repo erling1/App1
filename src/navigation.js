@@ -93,7 +93,7 @@ export function Navbar() {
               <a href="#about" onClick={aboutmeButton}>About Me</a>
               <a href="#FamilyHistory" onClick={FamilyHistoryButton}>Family History</a>
               <a href="#contact" onClick={contactmeButton}>Contact Me</a>
-              <a href="#Politics" onClick={PoliticsButton}>Politics</a>
+              <a href="#Politics" onClick={PoliticsButton}>Parliamentary Case Tracker</a>
             </div>
           </div>
         </div>
