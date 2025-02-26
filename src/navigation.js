@@ -37,6 +37,10 @@ export function Navbar() {
     navigate("/pages/CV");
   };
 
+  const PoliticsButton = () => {
+    navigate("/pages/Politics");
+  };
+
   
   return (
     <nav className="navbar-links">
@@ -89,6 +93,7 @@ export function Navbar() {
               <a href="#about" onClick={aboutmeButton}>About Me</a>
               <a href="#FamilyHistory" onClick={FamilyHistoryButton}>Family History</a>
               <a href="#contact" onClick={contactmeButton}>Contact Me</a>
+              <a href="#Politics" onClick={PoliticsButton}>Politics</a>
             </div>
           </div>
         </div>

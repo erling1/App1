@@ -19,6 +19,7 @@ import AiHelperButton from './AIHelper';
 import WelcomeModal from './pages/WelcomeModal';
 import InformationRelative from './pages/InfoRelativeFamilyHistory';
 import CVEnglish from './pages/CVEnglish';
+import PoliticsSearch from './pages/Politics';
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
         <Route path="/pages/Project6" element={<Project6/>}/>
         <Route  path="/pages/InfoRelativeFamilyHistory" element={<InformationRelative/>}/>
         <Route  path="/pages/CVEnglish" element={<CVEnglish/>}/>
+        <Route  path="/pages/Politics" element={<PoliticsSearch/>}/>
+
         
       </Routes>
       <AiHelperButton/>
